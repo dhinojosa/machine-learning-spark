@@ -1,0 +1,676 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark\nval df \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/data/iris.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:25:40.495",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "df: org.apache.spark.sql.DataFrame \u003d [Id: int, SepalLengthCm: double ... 4 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d4",
+            "http://172.17.0.2:4040/jobs/job?id\u003d5"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555042977634_398982720",
+      "id": "20190412-042257_2099306442",
+      "dateCreated": "2019-04-12 04:22:57.634",
+      "dateStarted": "2020-02-28 22:25:40.590",
+      "dateFinished": "2020-02-28 22:25:43.145",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ndf.columns",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:26:43.225",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res5: Array[String] \u003d Array(Id, SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043573589_648624007",
+      "id": "20190412-043253_1175432976",
+      "dateCreated": "2019-04-12 04:32:53.589",
+      "dateStarted": "2020-02-28 22:26:43.389",
+      "dateFinished": "2020-02-28 22:26:44.324",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:26:46.006",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-------------+------------+-------------+------------+-----------+\n| Id|SepalLengthCm|SepalWidthCm|PetalLengthCm|PetalWidthCm|    Species|\n+---+-------------+------------+-------------+------------+-----------+\n|  1|          5.1|         3.5|          1.4|         0.2|Iris-setosa|\n|  2|          4.9|         3.0|          1.4|         0.2|Iris-setosa|\n|  3|          4.7|         3.2|          1.3|         0.2|Iris-setosa|\n|  4|          4.6|         3.1|          1.5|         0.2|Iris-setosa|\n|  5|          5.0|         3.6|          1.4|         0.2|Iris-setosa|\n|  6|          5.4|         3.9|          1.7|         0.4|Iris-setosa|\n|  7|          4.6|         3.4|          1.4|         0.3|Iris-setosa|\n|  8|          5.0|         3.4|          1.5|         0.2|Iris-setosa|\n|  9|          4.4|         2.9|          1.4|         0.2|Iris-setosa|\n| 10|          4.9|         3.1|          1.5|         0.1|Iris-setosa|\n| 11|          5.4|         3.7|          1.5|         0.2|Iris-setosa|\n| 12|          4.8|         3.4|          1.6|         0.2|Iris-setosa|\n| 13|          4.8|         3.0|          1.4|         0.1|Iris-setosa|\n| 14|          4.3|         3.0|          1.1|         0.1|Iris-setosa|\n| 15|          5.8|         4.0|          1.2|         0.2|Iris-setosa|\n| 16|          5.7|         4.4|          1.5|         0.4|Iris-setosa|\n| 17|          5.4|         3.9|          1.3|         0.4|Iris-setosa|\n| 18|          5.1|         3.5|          1.4|         0.3|Iris-setosa|\n| 19|          5.7|         3.8|          1.7|         0.3|Iris-setosa|\n| 20|          5.1|         3.8|          1.5|         0.3|Iris-setosa|\n+---+-------------+------------+-------------+------------+-----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d6"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043026612_768237483",
+      "id": "20190412-042346_2116555954",
+      "dateCreated": "2019-04-12 04:23:46.613",
+      "dateStarted": "2020-02-28 22:26:46.136",
+      "dateFinished": "2020-02-28 22:26:48.515",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ndf.createOrReplaceTempView(\"iris_data\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:26:51.918",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043043453_-132152973",
+      "id": "20190412-042403_414484441",
+      "dateCreated": "2019-04-12 04:24:03.453",
+      "dateStarted": "2020-02-28 22:26:52.026",
+      "dateFinished": "2020-02-28 22:26:52.766",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.sql\nselect * from iris_data",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:27:42.105",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "scatterChart",
+              "height": 300.0,
+              "optionOpen": true,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Id": "string",
+                      "SepalLengthCm": "string",
+                      "SepalWidthCm": "string",
+                      "PetalLengthCm": "string",
+                      "PetalWidthCm": "string",
+                      "Species": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "scatterChart": {
+                  "group": {
+                    "name": "Species",
+                    "index": 5.0,
+                    "aggr": "sum"
+                  },
+                  "size": {
+                    "name": "PetalLengthCm",
+                    "index": 3.0,
+                    "aggr": "sum"
+                  },
+                  "xAxis": {
+                    "name": "PetalLengthCm",
+                    "index": 3.0,
+                    "aggr": "sum"
+                  },
+                  "yAxis": {
+                    "name": "PetalWidthCm",
+                    "index": 4.0,
+                    "aggr": "sum"
+                  }
+                }
+              }
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Id\tSepalLengthCm\tSepalWidthCm\tPetalLengthCm\tPetalWidthCm\tSpecies\n1\t5.1\t3.5\t1.4\t0.2\tIris-setosa\n2\t4.9\t3.0\t1.4\t0.2\tIris-setosa\n3\t4.7\t3.2\t1.3\t0.2\tIris-setosa\n4\t4.6\t3.1\t1.5\t0.2\tIris-setosa\n5\t5.0\t3.6\t1.4\t0.2\tIris-setosa\n6\t5.4\t3.9\t1.7\t0.4\tIris-setosa\n7\t4.6\t3.4\t1.4\t0.3\tIris-setosa\n8\t5.0\t3.4\t1.5\t0.2\tIris-setosa\n9\t4.4\t2.9\t1.4\t0.2\tIris-setosa\n10\t4.9\t3.1\t1.5\t0.1\tIris-setosa\n11\t5.4\t3.7\t1.5\t0.2\tIris-setosa\n12\t4.8\t3.4\t1.6\t0.2\tIris-setosa\n13\t4.8\t3.0\t1.4\t0.1\tIris-setosa\n14\t4.3\t3.0\t1.1\t0.1\tIris-setosa\n15\t5.8\t4.0\t1.2\t0.2\tIris-setosa\n16\t5.7\t4.4\t1.5\t0.4\tIris-setosa\n17\t5.4\t3.9\t1.3\t0.4\tIris-setosa\n18\t5.1\t3.5\t1.4\t0.3\tIris-setosa\n19\t5.7\t3.8\t1.7\t0.3\tIris-setosa\n20\t5.1\t3.8\t1.5\t0.3\tIris-setosa\n21\t5.4\t3.4\t1.7\t0.2\tIris-setosa\n22\t5.1\t3.7\t1.5\t0.4\tIris-setosa\n23\t4.6\t3.6\t1.0\t0.2\tIris-setosa\n24\t5.1\t3.3\t1.7\t0.5\tIris-setosa\n25\t4.8\t3.4\t1.9\t0.2\tIris-setosa\n26\t5.0\t3.0\t1.6\t0.2\tIris-setosa\n27\t5.0\t3.4\t1.6\t0.4\tIris-setosa\n28\t5.2\t3.5\t1.5\t0.2\tIris-setosa\n29\t5.2\t3.4\t1.4\t0.2\tIris-setosa\n30\t4.7\t3.2\t1.6\t0.2\tIris-setosa\n31\t4.8\t3.1\t1.6\t0.2\tIris-setosa\n32\t5.4\t3.4\t1.5\t0.4\tIris-setosa\n33\t5.2\t4.1\t1.5\t0.1\tIris-setosa\n34\t5.5\t4.2\t1.4\t0.2\tIris-setosa\n35\t4.9\t3.1\t1.5\t0.1\tIris-setosa\n36\t5.0\t3.2\t1.2\t0.2\tIris-setosa\n37\t5.5\t3.5\t1.3\t0.2\tIris-setosa\n38\t4.9\t3.1\t1.5\t0.1\tIris-setosa\n39\t4.4\t3.0\t1.3\t0.2\tIris-setosa\n40\t5.1\t3.4\t1.5\t0.2\tIris-setosa\n41\t5.0\t3.5\t1.3\t0.3\tIris-setosa\n42\t4.5\t2.3\t1.3\t0.3\tIris-setosa\n43\t4.4\t3.2\t1.3\t0.2\tIris-setosa\n44\t5.0\t3.5\t1.6\t0.6\tIris-setosa\n45\t5.1\t3.8\t1.9\t0.4\tIris-setosa\n46\t4.8\t3.0\t1.4\t0.3\tIris-setosa\n47\t5.1\t3.8\t1.6\t0.2\tIris-setosa\n48\t4.6\t3.2\t1.4\t0.2\tIris-setosa\n49\t5.3\t3.7\t1.5\t0.2\tIris-setosa\n50\t5.0\t3.3\t1.4\t0.2\tIris-setosa\n51\t7.0\t3.2\t4.7\t1.4\tIris-versicolor\n52\t6.4\t3.2\t4.5\t1.5\tIris-versicolor\n53\t6.9\t3.1\t4.9\t1.5\tIris-versicolor\n54\t5.5\t2.3\t4.0\t1.3\tIris-versicolor\n55\t6.5\t2.8\t4.6\t1.5\tIris-versicolor\n56\t5.7\t2.8\t4.5\t1.3\tIris-versicolor\n57\t6.3\t3.3\t4.7\t1.6\tIris-versicolor\n58\t4.9\t2.4\t3.3\t1.0\tIris-versicolor\n59\t6.6\t2.9\t4.6\t1.3\tIris-versicolor\n60\t5.2\t2.7\t3.9\t1.4\tIris-versicolor\n61\t5.0\t2.0\t3.5\t1.0\tIris-versicolor\n62\t5.9\t3.0\t4.2\t1.5\tIris-versicolor\n63\t6.0\t2.2\t4.0\t1.0\tIris-versicolor\n64\t6.1\t2.9\t4.7\t1.4\tIris-versicolor\n65\t5.6\t2.9\t3.6\t1.3\tIris-versicolor\n66\t6.7\t3.1\t4.4\t1.4\tIris-versicolor\n67\t5.6\t3.0\t4.5\t1.5\tIris-versicolor\n68\t5.8\t2.7\t4.1\t1.0\tIris-versicolor\n69\t6.2\t2.2\t4.5\t1.5\tIris-versicolor\n70\t5.6\t2.5\t3.9\t1.1\tIris-versicolor\n71\t5.9\t3.2\t4.8\t1.8\tIris-versicolor\n72\t6.1\t2.8\t4.0\t1.3\tIris-versicolor\n73\t6.3\t2.5\t4.9\t1.5\tIris-versicolor\n74\t6.1\t2.8\t4.7\t1.2\tIris-versicolor\n75\t6.4\t2.9\t4.3\t1.3\tIris-versicolor\n76\t6.6\t3.0\t4.4\t1.4\tIris-versicolor\n77\t6.8\t2.8\t4.8\t1.4\tIris-versicolor\n78\t6.7\t3.0\t5.0\t1.7\tIris-versicolor\n79\t6.0\t2.9\t4.5\t1.5\tIris-versicolor\n80\t5.7\t2.6\t3.5\t1.0\tIris-versicolor\n81\t5.5\t2.4\t3.8\t1.1\tIris-versicolor\n82\t5.5\t2.4\t3.7\t1.0\tIris-versicolor\n83\t5.8\t2.7\t3.9\t1.2\tIris-versicolor\n84\t6.0\t2.7\t5.1\t1.6\tIris-versicolor\n85\t5.4\t3.0\t4.5\t1.5\tIris-versicolor\n86\t6.0\t3.4\t4.5\t1.6\tIris-versicolor\n87\t6.7\t3.1\t4.7\t1.5\tIris-versicolor\n88\t6.3\t2.3\t4.4\t1.3\tIris-versicolor\n89\t5.6\t3.0\t4.1\t1.3\tIris-versicolor\n90\t5.5\t2.5\t4.0\t1.3\tIris-versicolor\n91\t5.5\t2.6\t4.4\t1.2\tIris-versicolor\n92\t6.1\t3.0\t4.6\t1.4\tIris-versicolor\n93\t5.8\t2.6\t4.0\t1.2\tIris-versicolor\n94\t5.0\t2.3\t3.3\t1.0\tIris-versicolor\n95\t5.6\t2.7\t4.2\t1.3\tIris-versicolor\n96\t5.7\t3.0\t4.2\t1.2\tIris-versicolor\n97\t5.7\t2.9\t4.2\t1.3\tIris-versicolor\n98\t6.2\t2.9\t4.3\t1.3\tIris-versicolor\n99\t5.1\t2.5\t3.0\t1.1\tIris-versicolor\n100\t5.7\t2.8\t4.1\t1.3\tIris-versicolor\n101\t6.3\t3.3\t6.0\t2.5\tIris-virginica\n102\t5.8\t2.7\t5.1\t1.9\tIris-virginica\n103\t7.1\t3.0\t5.9\t2.1\tIris-virginica\n104\t6.3\t2.9\t5.6\t1.8\tIris-virginica\n105\t6.5\t3.0\t5.8\t2.2\tIris-virginica\n106\t7.6\t3.0\t6.6\t2.1\tIris-virginica\n107\t4.9\t2.5\t4.5\t1.7\tIris-virginica\n108\t7.3\t2.9\t6.3\t1.8\tIris-virginica\n109\t6.7\t2.5\t5.8\t1.8\tIris-virginica\n110\t7.2\t3.6\t6.1\t2.5\tIris-virginica\n111\t6.5\t3.2\t5.1\t2.0\tIris-virginica\n112\t6.4\t2.7\t5.3\t1.9\tIris-virginica\n113\t6.8\t3.0\t5.5\t2.1\tIris-virginica\n114\t5.7\t2.5\t5.0\t2.0\tIris-virginica\n115\t5.8\t2.8\t5.1\t2.4\tIris-virginica\n116\t6.4\t3.2\t5.3\t2.3\tIris-virginica\n117\t6.5\t3.0\t5.5\t1.8\tIris-virginica\n118\t7.7\t3.8\t6.7\t2.2\tIris-virginica\n119\t7.7\t2.6\t6.9\t2.3\tIris-virginica\n120\t6.0\t2.2\t5.0\t1.5\tIris-virginica\n121\t6.9\t3.2\t5.7\t2.3\tIris-virginica\n122\t5.6\t2.8\t4.9\t2.0\tIris-virginica\n123\t7.7\t2.8\t6.7\t2.0\tIris-virginica\n124\t6.3\t2.7\t4.9\t1.8\tIris-virginica\n125\t6.7\t3.3\t5.7\t2.1\tIris-virginica\n126\t7.2\t3.2\t6.0\t1.8\tIris-virginica\n127\t6.2\t2.8\t4.8\t1.8\tIris-virginica\n128\t6.1\t3.0\t4.9\t1.8\tIris-virginica\n129\t6.4\t2.8\t5.6\t2.1\tIris-virginica\n130\t7.2\t3.0\t5.8\t1.6\tIris-virginica\n131\t7.4\t2.8\t6.1\t1.9\tIris-virginica\n132\t7.9\t3.8\t6.4\t2.0\tIris-virginica\n133\t6.4\t2.8\t5.6\t2.2\tIris-virginica\n134\t6.3\t2.8\t5.1\t1.5\tIris-virginica\n135\t6.1\t2.6\t5.6\t1.4\tIris-virginica\n136\t7.7\t3.0\t6.1\t2.3\tIris-virginica\n137\t6.3\t3.4\t5.6\t2.4\tIris-virginica\n138\t6.4\t3.1\t5.5\t1.8\tIris-virginica\n139\t6.0\t3.0\t4.8\t1.8\tIris-virginica\n140\t6.9\t3.1\t5.4\t2.1\tIris-virginica\n141\t6.7\t3.1\t5.6\t2.4\tIris-virginica\n142\t6.9\t3.1\t5.1\t2.3\tIris-virginica\n143\t5.8\t2.7\t5.1\t1.9\tIris-virginica\n144\t6.8\t3.2\t5.9\t2.3\tIris-virginica\n145\t6.7\t3.3\t5.7\t2.5\tIris-virginica\n146\t6.7\t3.0\t5.2\t2.3\tIris-virginica\n147\t6.3\t2.5\t5.0\t1.9\tIris-virginica\n148\t6.5\t3.0\t5.2\t2.0\tIris-virginica\n149\t6.2\t3.4\t5.4\t2.3\tIris-virginica\n150\t5.9\t3.0\t5.1\t1.8\tIris-virginica\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d7"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043074559_1634376719",
+      "id": "20190412-042434_328014477",
+      "dateCreated": "2019-04-12 04:24:34.559",
+      "dateStarted": "2020-02-28 22:26:56.055",
+      "dateFinished": "2020-02-28 22:26:56.759",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ndf.drop(\"id\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:28:10.252",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res8: org.apache.spark.sql.DataFrame \u003d [SepalLengthCm: double, SepalWidthCm: double ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043375431_-621075967",
+      "id": "20190412-042935_1883505199",
+      "dateCreated": "2019-04-12 04:29:35.431",
+      "dateStarted": "2020-02-28 22:28:10.362",
+      "dateFinished": "2020-02-28 22:28:11.331",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.ml.feature.VectorAssembler\nval assembler \u003d new VectorAssembler()\n                   .setInputCols(Array(\"SepalLengthCm\", \"SepalWidthCm\", \"PetalLengthCm\", \"PetalWidthCm\"))\n                   .setOutputCol(\"features\")\n                 \n\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:28:31.733",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.ml.feature.VectorAssembler\nassembler: org.apache.spark.ml.feature.VectorAssembler \u003d vecAssembler_f23c2a6ed994\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043088709_-2134981628",
+      "id": "20190412-042448_178217680",
+      "dateCreated": "2019-04-12 04:24:48.709",
+      "dateStarted": "2020-02-28 22:28:31.856",
+      "dateFinished": "2020-02-28 22:28:35.595",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval featureFrame \u003d assembler.transform(df.drop(\"id\")).select(\"features\")\nfeatureFrame.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:28:38.871",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+\n|         features|\n+-----------------+\n|[5.1,3.5,1.4,0.2]|\n|[4.9,3.0,1.4,0.2]|\n|[4.7,3.2,1.3,0.2]|\n|[4.6,3.1,1.5,0.2]|\n|[5.0,3.6,1.4,0.2]|\n|[5.4,3.9,1.7,0.4]|\n|[4.6,3.4,1.4,0.3]|\n|[5.0,3.4,1.5,0.2]|\n|[4.4,2.9,1.4,0.2]|\n|[4.9,3.1,1.5,0.1]|\n|[5.4,3.7,1.5,0.2]|\n|[4.8,3.4,1.6,0.2]|\n|[4.8,3.0,1.4,0.1]|\n|[4.3,3.0,1.1,0.1]|\n|[5.8,4.0,1.2,0.2]|\n|[5.7,4.4,1.5,0.4]|\n|[5.4,3.9,1.3,0.4]|\n|[5.1,3.5,1.4,0.3]|\n|[5.7,3.8,1.7,0.3]|\n|[5.1,3.8,1.5,0.3]|\n+-----------------+\nonly showing top 20 rows\n\nfeatureFrame: org.apache.spark.sql.DataFrame \u003d [features: vector]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d8"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043676494_1330799894",
+      "id": "20190412-043436_998955799",
+      "dateCreated": "2019-04-12 04:34:36.495",
+      "dateStarted": "2020-02-28 22:28:38.993",
+      "dateFinished": "2020-02-28 22:28:42.705",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval Array(training, test) \u003d featureFrame.randomSplit(Array(0.9, 0.1), seed \u003d 45)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:29:47.809",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "training: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [features: vector]\ntest: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [features: vector]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1561819894936_48740410",
+      "id": "20190629-145134_1540252807",
+      "dateCreated": "2019-06-29 14:51:34.936",
+      "dateStarted": "2020-02-28 22:29:47.922",
+      "dateFinished": "2020-02-28 22:29:50.162",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.ml.clustering.KMeans\nval kmeans \u003d new KMeans().setK(3).setSeed(1L)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:29:51.760",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.ml.clustering.KMeans\nkmeans: org.apache.spark.ml.clustering.KMeans \u003d kmeans_117e4c37fd7e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555043919893_-1965491618",
+      "id": "20190412-043839_1513532740",
+      "dateCreated": "2019-04-12 04:38:39.893",
+      "dateStarted": "2020-02-28 22:29:51.853",
+      "dateFinished": "2020-02-28 22:29:52.480",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval model \u003d kmeans.fit(training)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:29:55.802",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "model: org.apache.spark.ml.clustering.KMeansModel \u003d kmeans_117e4c37fd7e\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d9",
+            "http://172.17.0.2:4040/jobs/job?id\u003d10",
+            "http://172.17.0.2:4040/jobs/job?id\u003d11",
+            "http://172.17.0.2:4040/jobs/job?id\u003d12",
+            "http://172.17.0.2:4040/jobs/job?id\u003d13",
+            "http://172.17.0.2:4040/jobs/job?id\u003d14",
+            "http://172.17.0.2:4040/jobs/job?id\u003d15",
+            "http://172.17.0.2:4040/jobs/job?id\u003d16",
+            "http://172.17.0.2:4040/jobs/job?id\u003d17",
+            "http://172.17.0.2:4040/jobs/job?id\u003d18",
+            "http://172.17.0.2:4040/jobs/job?id\u003d19",
+            "http://172.17.0.2:4040/jobs/job?id\u003d20"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555044786358_2140766399",
+      "id": "20190412-045306_1313740541",
+      "dateCreated": "2019-04-12 04:53:06.358",
+      "dateStarted": "2020-02-28 22:29:55.920",
+      "dateFinished": "2020-02-28 22:30:03.215",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval predictions \u003d model.transform(test)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:30:07.255",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "predictions: org.apache.spark.sql.DataFrame \u003d [features: vector, prediction: int]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555045034659_656353886",
+      "id": "20190412-045714_589623969",
+      "dateCreated": "2019-04-12 04:57:14.659",
+      "dateStarted": "2020-02-28 22:30:07.361",
+      "dateFinished": "2020-02-28 22:30:08.098",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\npredictions.show(200, false)",
+      "user": "anonymous",
+      "dateUpdated": "2020-02-28 22:30:12.038",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+----------+\n|features         |prediction|\n+-----------------+----------+\n|[4.8,3.4,1.6,0.2]|1         |\n|[5.0,2.0,3.5,1.0]|0         |\n|[5.0,2.3,3.3,1.0]|0         |\n|[5.1,2.5,3.0,1.1]|0         |\n|[5.5,3.5,1.3,0.2]|1         |\n|[5.7,3.0,4.2,1.2]|0         |\n|[5.8,2.7,4.1,1.0]|0         |\n|[6.0,2.9,4.5,1.5]|0         |\n|[6.0,3.4,4.5,1.6]|0         |\n|[6.4,2.9,4.3,1.3]|0         |\n|[6.7,3.3,5.7,2.1]|2         |\n|[6.9,3.1,5.4,2.1]|2         |\n|[6.9,3.2,5.7,2.3]|2         |\n|[7.4,2.8,6.1,1.9]|2         |\n+-----------------+----------+\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d21"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555045294109_-57652229",
+      "id": "20190412-050134_620134714",
+      "dateCreated": "2019-04-12 05:01:34.109",
+      "dateStarted": "2020-02-28 22:30:12.208",
+      "dateFinished": "2020-02-28 22:30:14.062",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-17 12:56:15.627",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1563368175620_1680621313",
+      "id": "20190717-125615_1743645197",
+      "dateCreated": "2019-07-17 12:56:15.621",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "IrisKMeans",
+  "id": "2EAJAEBJX",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

@@ -1,0 +1,576 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark\nval df \u003d spark.read.format(\"csv\").option(\"header\", \"true\").option(\"inferSchema\", \"true\").load(\"/data/heart.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:13:46.129",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "df: org.apache.spark.sql.DataFrame \u003d [age: int, sex: int ... 12 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.3:4040/jobs/job?id\u003d3",
+            "http://172.17.0.3:4040/jobs/job?id\u003d4"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555033537720_-1779309070",
+      "id": "20190412-014537_980336430",
+      "dateCreated": "2019-04-12 01:45:37.720",
+      "dateStarted": "2019-07-24 16:13:46.255",
+      "dateFinished": "2019-07-24 16:13:49.075",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:13:50.420",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+\n|age|sex| cp|trestbps|chol|fbs|restecg|thalach|exang|oldpeak|slope| ca|thal|target|\n+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+\n| 63|  1|  3|     145| 233|  1|      0|    150|    0|    2.3|    0|  0|   1|     1|\n| 37|  1|  2|     130| 250|  0|      1|    187|    0|    3.5|    0|  0|   2|     1|\n| 41|  0|  1|     130| 204|  0|      0|    172|    0|    1.4|    2|  0|   2|     1|\n| 56|  1|  1|     120| 236|  0|      1|    178|    0|    0.8|    2|  0|   2|     1|\n| 57|  0|  0|     120| 354|  0|      1|    163|    1|    0.6|    2|  0|   2|     1|\n| 57|  1|  0|     140| 192|  0|      1|    148|    0|    0.4|    1|  0|   1|     1|\n| 56|  0|  1|     140| 294|  0|      0|    153|    0|    1.3|    1|  0|   2|     1|\n| 44|  1|  1|     120| 263|  0|      1|    173|    0|    0.0|    2|  0|   3|     1|\n| 52|  1|  2|     172| 199|  1|      1|    162|    0|    0.5|    2|  0|   3|     1|\n| 57|  1|  2|     150| 168|  0|      1|    174|    0|    1.6|    2|  0|   2|     1|\n| 54|  1|  0|     140| 239|  0|      1|    160|    0|    1.2|    2|  0|   2|     1|\n| 48|  0|  2|     130| 275|  0|      1|    139|    0|    0.2|    2|  0|   2|     1|\n| 49|  1|  1|     130| 266|  0|      1|    171|    0|    0.6|    2|  0|   2|     1|\n| 64|  1|  3|     110| 211|  0|      0|    144|    1|    1.8|    1|  0|   2|     1|\n| 58|  0|  3|     150| 283|  1|      0|    162|    0|    1.0|    2|  0|   2|     1|\n| 50|  0|  2|     120| 219|  0|      1|    158|    0|    1.6|    1|  0|   2|     1|\n| 58|  0|  2|     120| 340|  0|      1|    172|    0|    0.0|    2|  0|   2|     1|\n| 66|  0|  3|     150| 226|  0|      1|    114|    0|    2.6|    0|  0|   2|     1|\n| 43|  1|  0|     150| 247|  0|      1|    171|    0|    1.5|    2|  0|   2|     1|\n| 69|  0|  3|     140| 239|  0|      1|    151|    0|    1.8|    2|  2|   2|     1|\n+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.3:4040/jobs/job?id\u003d5"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555034149476_2117306173",
+      "id": "20190412-015549_2072803542",
+      "dateCreated": "2019-04-12 01:55:49.489",
+      "dateStarted": "2019-07-24 16:13:50.528",
+      "dateFinished": "2019-07-24 16:13:52.721",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.ml.feature.VectorAssembler",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:13:55.231",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.ml.feature.VectorAssembler\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555036672283_970537804",
+      "id": "20190412-023752_422710429",
+      "dateCreated": "2019-04-12 02:37:52.284",
+      "dateStarted": "2019-07-24 16:13:55.343",
+      "dateFinished": "2019-07-24 16:13:55.812",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval assembler \u003d new VectorAssembler()\n      .setInputCols(Array(\"age\", \"sex\", \"cp\", \"trestbps\", \"chol\",\n        \"fbs\", \"restecg\", \"thalach\", \"exang\", \"oldpeak\", \"slope\", \"ca\", \"thal\"))\n      .setOutputCol(\"features\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:13:57.956",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "assembler: org.apache.spark.ml.feature.VectorAssembler \u003d vecAssembler_bb9ed935f71f\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555036696344_1237072749",
+      "id": "20190412-023816_2128106913",
+      "dateCreated": "2019-04-12 02:38:16.345",
+      "dateStarted": "2019-07-24 16:13:58.063",
+      "dateFinished": "2019-07-24 16:14:00.116",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval newFrame \u003d assembler.transform(df)\nnewFrame.show()\n    ",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:14:09.217",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+--------------------+\n|age|sex| cp|trestbps|chol|fbs|restecg|thalach|exang|oldpeak|slope| ca|thal|target|            features|\n+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+--------------------+\n| 63|  1|  3|     145| 233|  1|      0|    150|    0|    2.3|    0|  0|   1|     1|[63.0,1.0,3.0,145...|\n| 37|  1|  2|     130| 250|  0|      1|    187|    0|    3.5|    0|  0|   2|     1|[37.0,1.0,2.0,130...|\n| 41|  0|  1|     130| 204|  0|      0|    172|    0|    1.4|    2|  0|   2|     1|[41.0,0.0,1.0,130...|\n| 56|  1|  1|     120| 236|  0|      1|    178|    0|    0.8|    2|  0|   2|     1|[56.0,1.0,1.0,120...|\n| 57|  0|  0|     120| 354|  0|      1|    163|    1|    0.6|    2|  0|   2|     1|[57.0,0.0,0.0,120...|\n| 57|  1|  0|     140| 192|  0|      1|    148|    0|    0.4|    1|  0|   1|     1|[57.0,1.0,0.0,140...|\n| 56|  0|  1|     140| 294|  0|      0|    153|    0|    1.3|    1|  0|   2|     1|[56.0,0.0,1.0,140...|\n| 44|  1|  1|     120| 263|  0|      1|    173|    0|    0.0|    2|  0|   3|     1|[44.0,1.0,1.0,120...|\n| 52|  1|  2|     172| 199|  1|      1|    162|    0|    0.5|    2|  0|   3|     1|[52.0,1.0,2.0,172...|\n| 57|  1|  2|     150| 168|  0|      1|    174|    0|    1.6|    2|  0|   2|     1|[57.0,1.0,2.0,150...|\n| 54|  1|  0|     140| 239|  0|      1|    160|    0|    1.2|    2|  0|   2|     1|[54.0,1.0,0.0,140...|\n| 48|  0|  2|     130| 275|  0|      1|    139|    0|    0.2|    2|  0|   2|     1|[48.0,0.0,2.0,130...|\n| 49|  1|  1|     130| 266|  0|      1|    171|    0|    0.6|    2|  0|   2|     1|[49.0,1.0,1.0,130...|\n| 64|  1|  3|     110| 211|  0|      0|    144|    1|    1.8|    1|  0|   2|     1|[64.0,1.0,3.0,110...|\n| 58|  0|  3|     150| 283|  1|      0|    162|    0|    1.0|    2|  0|   2|     1|[58.0,0.0,3.0,150...|\n| 50|  0|  2|     120| 219|  0|      1|    158|    0|    1.6|    1|  0|   2|     1|[50.0,0.0,2.0,120...|\n| 58|  0|  2|     120| 340|  0|      1|    172|    0|    0.0|    2|  0|   2|     1|[58.0,0.0,2.0,120...|\n| 66|  0|  3|     150| 226|  0|      1|    114|    0|    2.6|    0|  0|   2|     1|[66.0,0.0,3.0,150...|\n| 43|  1|  0|     150| 247|  0|      1|    171|    0|    1.5|    2|  0|   2|     1|[43.0,1.0,0.0,150...|\n| 69|  0|  3|     140| 239|  0|      1|    151|    0|    1.8|    2|  2|   2|     1|[69.0,0.0,3.0,140...|\n+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+--------------------+\nonly showing top 20 rows\n\nnewFrame: org.apache.spark.sql.DataFrame \u003d [age: int, sex: int ... 13 more fields]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.3:4040/jobs/job?id\u003d6"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1555036803018_-1649025081",
+      "id": "20190412-024003_1898023800",
+      "dateCreated": "2019-04-12 02:40:03.018",
+      "dateStarted": "2019-07-24 16:14:09.320",
+      "dateFinished": "2019-07-24 16:14:12.114",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.ml.classification.DecisionTreeClassifier\nval decisionTreeClassifier \u003d new DecisionTreeClassifier()\n      .setFeaturesCol(\"features\")\n      .setLabelCol(\"target\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:14:14.470",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.ml.classification.DecisionTreeClassifier\ndecisionTreeClassifier: org.apache.spark.ml.classification.DecisionTreeClassifier \u003d dtc_ef94cca7a915\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555037535263_-1557693017",
+      "id": "20190412-025215_2082736156",
+      "dateCreated": "2019-04-12 02:52:15.263",
+      "dateStarted": "2019-07-24 16:14:14.567",
+      "dateFinished": "2019-07-24 16:14:16.071",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\nval splitData \u003d newFrame.randomSplit(Array(0.7, 0.3), seed \u003d 1234L)\nval trainingData \u003d splitData(0)\nval testingData \u003d splitData(1)",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:14:17.949",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "splitData: Array[org.apache.spark.sql.Dataset[org.apache.spark.sql.Row]] \u003d Array([age: int, sex: int ... 13 more fields], [age: int, sex: int ... 13 more fields])\ntrainingData: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [age: int, sex: int ... 13 more fields]\ntestingData: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [age: int, sex: int ... 13 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1563368626740_2095321948",
+      "id": "20190717-130346_6693345",
+      "dateCreated": "2019-07-17 13:03:46.740",
+      "dateStarted": "2019-07-24 16:14:18.052",
+      "dateFinished": "2019-07-24 16:14:19.717",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval model \u003d decisionTreeClassifier.fit(trainingData)",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:14:21.850",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "model: org.apache.spark.ml.classification.DecisionTreeClassificationModel \u003d DecisionTreeClassificationModel (uid\u003ddtc_ef94cca7a915) of depth 5 with 45 nodes\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.3:4040/jobs/job?id\u003d7",
+            "http://172.17.0.3:4040/jobs/job?id\u003d8",
+            "http://172.17.0.3:4040/jobs/job?id\u003d9",
+            "http://172.17.0.3:4040/jobs/job?id\u003d10",
+            "http://172.17.0.3:4040/jobs/job?id\u003d11",
+            "http://172.17.0.3:4040/jobs/job?id\u003d12",
+            "http://172.17.0.3:4040/jobs/job?id\u003d13",
+            "http://172.17.0.3:4040/jobs/job?id\u003d14",
+            "http://172.17.0.3:4040/jobs/job?id\u003d15"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1563368288650_1164959562",
+      "id": "20190717-125808_388669675",
+      "dateCreated": "2019-07-17 12:58:08.650",
+      "dateStarted": "2019-07-24 16:14:21.961",
+      "dateFinished": "2019-07-24 16:14:36.110",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval result \u003d model.transform(testingData)",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:14:37.447",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "result: org.apache.spark.sql.DataFrame \u003d [age: int, sex: int ... 16 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1563369157850_-492749363",
+      "id": "20190717-131237_327993710",
+      "dateCreated": "2019-07-17 13:12:37.850",
+      "dateStarted": "2019-07-24 16:14:37.538",
+      "dateFinished": "2019-07-24 16:14:38.390",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nresult.show()",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:14:40.965",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+--------------------+-------------+--------------------+----------+\n|age|sex| cp|trestbps|chol|fbs|restecg|thalach|exang|oldpeak|slope| ca|thal|target|            features|rawPrediction|         probability|prediction|\n+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+--------------------+-------------+--------------------+----------+\n| 29|  1|  1|     130| 204|  0|      0|    202|    0|    0.0|    2|  0|   2|     1|[29.0,1.0,1.0,130...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 34|  0|  1|     118| 210|  0|      1|    192|    0|    0.7|    2|  0|   2|     1|[34.0,0.0,1.0,118...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 34|  1|  3|     118| 182|  0|      0|    174|    0|    0.0|    2|  0|   2|     1|[34.0,1.0,3.0,118...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 39|  0|  2|     138| 220|  0|      1|    152|    0|    0.0|    1|  0|   2|     1|[39.0,0.0,2.0,138...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 41|  1|  1|     135| 203|  0|      1|    132|    0|    0.0|    1|  0|   1|     1|[41.0,1.0,1.0,135...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 41|  1|  2|     112| 250|  0|      1|    179|    0|    0.0|    2|  0|   2|     1|[41.0,1.0,2.0,112...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 42|  1|  0|     136| 315|  0|      1|    125|    1|    1.8|    1|  0|   1|     0|[42.0,1.0,0.0,136...|    [6.0,1.0]|[0.85714285714285...|       0.0|\n| 42|  1|  2|     120| 240|  1|      1|    194|    0|    0.8|    0|  0|   3|     1|[42.0,1.0,2.0,120...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 43|  0|  2|     122| 213|  0|      1|    165|    0|    0.2|    1|  0|   2|     1|[43.0,0.0,2.0,122...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 43|  1|  0|     120| 177|  0|      0|    120|    1|    2.5|    1|  0|   3|     0|[43.0,1.0,0.0,120...|   [12.0,0.0]|           [1.0,0.0]|       0.0|\n| 43|  1|  2|     130| 315|  0|      1|    162|    0|    1.9|    2|  1|   2|     1|[43.0,1.0,2.0,130...|    [8.0,0.0]|           [1.0,0.0]|       0.0|\n| 44|  0|  2|     108| 141|  0|      1|    175|    0|    0.6|    1|  0|   2|     1|[44.0,0.0,2.0,108...|    [3.0,9.0]|         [0.25,0.75]|       1.0|\n| 44|  1|  0|     110| 197|  0|      0|    177|    0|    0.0|    2|  1|   2|     0|[44.0,1.0,0.0,110...|   [43.0,0.0]|           [1.0,0.0]|       0.0|\n| 44|  1|  1|     130| 219|  0|      0|    188|    0|    0.0|    2|  0|   2|     1|[44.0,1.0,1.0,130...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 45|  1|  1|     128| 308|  0|      0|    170|    0|    0.0|    2|  0|   2|     1|[45.0,1.0,1.0,128...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 46|  0|  1|     105| 204|  0|      1|    172|    0|    0.0|    2|  0|   2|     1|[46.0,0.0,1.0,105...|    [3.0,9.0]|         [0.25,0.75]|       1.0|\n| 47|  1|  2|     130| 253|  0|      1|    179|    0|    0.0|    2|  0|   2|     1|[47.0,1.0,2.0,130...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n| 48|  1|  0|     124| 274|  0|      0|    166|    0|    0.5|    1|  0|   3|     0|[48.0,1.0,0.0,124...|    [1.0,4.0]|           [0.2,0.8]|       1.0|\n| 48|  1|  0|     130| 256|  1|      0|    150|    1|    0.0|    2|  2|   3|     0|[48.0,1.0,0.0,130...|   [43.0,0.0]|           [1.0,0.0]|       0.0|\n| 48|  1|  1|     130| 245|  0|      0|    180|    0|    0.2|    1|  0|   2|     1|[48.0,1.0,1.0,130...|   [0.0,48.0]|           [0.0,1.0]|       1.0|\n+---+---+---+--------+----+---+-------+-------+-----+-------+-----+---+----+------+--------------------+-------------+--------------------+----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.3:4040/jobs/job?id\u003d16"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1563369176162_1800113670",
+      "id": "20190717-131256_1899681868",
+      "dateCreated": "2019-07-17 13:12:56.162",
+      "dateStarted": "2019-07-24 16:14:41.057",
+      "dateFinished": "2019-07-24 16:14:42.556",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.ml.evaluation.BinaryClassificationEvaluator\n\nval evaluator \u003d new BinaryClassificationEvaluator()\n                    .setLabelCol(\"target\") \n                    .setRawPredictionCol(\"rawPrediction\") ",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:15:04.103",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.ml.evaluation.BinaryClassificationEvaluator\nevaluator: org.apache.spark.ml.evaluation.BinaryClassificationEvaluator \u003d binEval_66c9d4db71ed\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1555037810421_1688929063",
+      "id": "20190412-025650_1699282035",
+      "dateCreated": "2019-04-12 02:56:50.421",
+      "dateStarted": "2019-07-24 16:15:04.293",
+      "dateFinished": "2019-07-24 16:15:05.054",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n//val accuracyMetric \u003d evaluator.setMetricName(\"recall\")\nval aucScore \u003d evaluator.evaluate(result)\nprintln(s\"AUC Score \u003d $accuracy\")",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-24 16:19:22.643",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "AUC Score \u003d 0.8128156565656566\naucScore: Double \u003d 0.8128156565656566\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.3:4040/jobs/job?id\u003d20",
+            "http://172.17.0.3:4040/jobs/job?id\u003d21",
+            "http://172.17.0.3:4040/jobs/job?id\u003d22"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1563369335628_-1463179373",
+      "id": "20190717-131535_2022693422",
+      "dateCreated": "2019-07-17 13:15:35.629",
+      "dateStarted": "2019-07-24 16:19:22.721",
+      "dateFinished": "2019-07-24 16:19:24.008",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2019-07-17 13:17:54.990",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1563369474988_-1335771523",
+      "id": "20190717-131754_894224657",
+      "dateCreated": "2019-07-17 13:17:54.988",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "HeartDecisionTree",
+  "id": "2EB65HDQF",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
